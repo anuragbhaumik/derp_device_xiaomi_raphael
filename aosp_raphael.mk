@@ -17,15 +17,22 @@
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
 # Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-EVO_BUILD_TYPE := OFFICIAL
-EXTRA_FOD_ANIMATIONS := true
-TARGET_BOOT_ANIMATION_RES := 1080
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_raphael
+PRODUCT_NAME := aosp_raphael
 PRODUCT_DEVICE := raphael
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_USES_BLUR := true
+EXTRA_FOD_ANIMATIONS := true
+TARGET_USES_FACE_UNLOCK := true
+HYCON_MAINTAINER := Anurag Bhaumik
+
+#official
+HYCON_BUILD_TYPE=OFFICIAL
