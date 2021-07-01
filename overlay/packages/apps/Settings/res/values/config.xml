@@ -49,5 +49,5 @@
     <string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
     
     <!-- Smart Charging -->
-    <bool name="config_supportSmartCharging">true</bool>
+    <bool name="config_deviceSupportSmartCharging">true</bool>
 </resources>
